@@ -7,6 +7,7 @@ import fs from "fs-extra"
 import 'dotenv/config'
 async function main(){
     const provider=new ethers.providers.JsonRpcProvider(process.env.RPC_URL); //http://127.0.0.1:7545 we can make api call to this node but it is annyoing thus we use ether.js or web3.js to interact with our blockchain node
+    //To get connected to any type of testnet use private key of ur metamask and use alchemy to get the rpc url
     const wallet=new ethers.Wallet(process.env.PRIVATE_KEY,provider);
     const abi=fs.readFileSync("./simpleStorage_sol_SimpleStorage.abi","utf-8");
     const binary=fs.readFileSync("./simpleStorage_sol_SimpleStorage.bin","utf-8");
