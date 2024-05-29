@@ -16,7 +16,7 @@ library PriceConverter {
     }
 
     // 1000000000
-    function getConversionRate( AggregatorV3Interface priceFeed, uint256 ethAmount) internal view returns (uint256){
+  function getConversionRate(AggregatorV3Interface priceFeed, uint256 ethAmount) internal view returns (uint256){
         uint256 ethPrice = getPrice(priceFeed);
         uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1000000000000000000;
         // or (Both will do the same thing)
