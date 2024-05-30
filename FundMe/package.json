@@ -27,5 +27,10 @@
   },
   "dependencies": {
     "@chainlink/contracts": "^0.1.9"
+  },
+  "scripts": {
+    "test":"npx hardhat test",
+    "test:staging":"npx hardhat test --network rinkeby",
+    "coverage":"npx hardhat coverage"
   }
 }
