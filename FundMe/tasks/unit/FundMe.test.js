@@ -82,7 +82,7 @@ describe("FundMe", async function(){
          for(i=1;i<6;i++){
             assert.equal(await fundMe.addressToAmountFunded(accounts[i].address),0)
          }
-         if("only allows the owner to withdraw",async function(){
+         it("only allows the owner to withdraw",async function(){
             const accounts=await ethers.getSigners();
             const attacker=accounts[1];
             const attackerConnectedContract=await fundMe.connect(attacker); //First the 
